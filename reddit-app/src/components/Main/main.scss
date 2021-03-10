@@ -32,15 +32,11 @@ main {
 
 .post {
   display: flex;
-  flex-direction: column;
-  padding: 12px;
-  background-color: #dae0e6;
   border-radius: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .post h2 {
-    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 20px;
 }
@@ -48,7 +44,10 @@ main {
 .control-box {
   display: flex;
   flex-direction: column;
-  background-color: #dae0e6;
+  // background-color: #646d73;
+  background-color: white;
+  color: #373c3f;
+  line-height: 20px;
   border-radius: 5px;
   margin-bottom: 15px;
 }
@@ -60,12 +59,33 @@ main {
 .control-box h2 {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: #00070f;
+    // background-color: #00070f;
+    background-color: #4aa3df;
     color: white;
     padding: 12px;
-    font-family: 'Lato', sans-serif;
     font-weight: 700;
     font-size: 20px;
 }
 
+.vote {
+  display: flex;
+  width: 50px;
+  flex-direction: column;
+  padding: 12px;
+  background-color: #eee;
+  line-height: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 12px;
+  background-color: white;
+  line-height: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
