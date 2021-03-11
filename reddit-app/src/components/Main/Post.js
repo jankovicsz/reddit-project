@@ -1,8 +1,15 @@
+import downvote from '../../assets/downvote.png';
+// import downvoted from '../../assets/downvoted.png';
+import upvote from '../../assets/upvote.png';
+// import upvoted from '../../assets/upvoted.png';
+
 export default function Post() {
   return (
     <div className='post'>
       <div className='vote'>
+        <img src={upvote} alt='upvote' />
         1
+        <img src={downvote} alt='downvote' />
       </div>
       <div className='content'>
         <h2>Ez egy post</h2>
