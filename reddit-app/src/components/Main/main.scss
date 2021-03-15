@@ -1,3 +1,5 @@
+@import '../../stlye/variables.scss';
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -44,10 +46,10 @@ main {
 .control-box {
   display: flex;
   flex-direction: column;
-  background-color: #646d73;
-  // background-color: white;
+  background-color: $color_grey;
+  // background-color: $color_white;
   // color: #373c3f;
-  color: white;
+  color: $color_white;
   line-height: 20px;
   border-radius: 5px;
   margin-bottom: 15px;
@@ -60,11 +62,11 @@ main {
 .control-box h2 {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border: #646d73 solid 1px;
-    background-color: #373c3f;
+    border: $color_grey solid 1px;
+    background-color: $bg_color_dark;
     // background-color: #00070f;
     //background-color: #4aa3df vagy #3386b6;
-    color: white;
+    color: $color_white;
     padding: 12px;
     font-weight: 700;
     font-size: 16px;
@@ -91,10 +93,24 @@ main {
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 12px;
-  background-color: white;
+  padding: 18px;
+  background-color: $color_white;
   line-height: 20px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
+.sender {
+  display: flex;
+}
+
+.sender .time {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.sender .owner {
+  display: inline-block;
+  margin-left: 5px;
+  color: $color_blue;
+}

@@ -1,30 +1,39 @@
 import downvote from '../../assets/downvote.png';
-// import downvoted from '../../assets/downvoted.png';
 import upvote from '../../assets/upvote.png';
-// import upvoted from '../../assets/upvoted.png';
 
-export default function Post() {
+export default function Post(props) {
+
+  const {
+    post: { score, title, url, owner, timestamp },
+  } = props;
+  const postDate = new Date(timestamp * 1000);
+  const hours = Math.round((Date.now() - postDate) / 3600000);
+  const days = Math.round((Date.now() - postDate) / 86400000);
+  const month = Math.round((Date.now() - postDate) / 2592000000);
+
   return (
     <div className='post'>
       <div className='vote'>
-        <img src={upvote} alt='upvote' />
-        1
+      <div>
+      <img src={upvote} alt='upvote'/>
+      </div>
+        {score}
+        <div>
         <img src={downvote} alt='downvote' />
+        </div>
       </div>
       <div className='content'>
-        <h2>Ez egy post</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ad
-          adipisci praesentium explicabo doloribus facere maiores possimus, at
-          sit fugit quis dignissimos sequi cupiditate temporibus modi molestias
-          quaerat rem quo.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ad
-          adipisci praesentium explicabo doloribus facere maiores possimus, at
-          sit fugit quis dignissimos sequi cupiditate temporibus modi molestias
-          quaerat rem quo.
-        </p>
+        <h2>{title}</h2>
+        <div className='sender'>
+          Submitted 
+          <span className='time'>
+            {days < 1 && <p>{hours} hours ago</p>}
+            {days > 1 && days < 30 && <p>{days} days ago</p>}
+            {days > 30 && <p>{month} month ago</p>}
+          </span> 
+          by <span className='owner'>{owner}</span>
+        </div>
+        <a href={url}>{url}</a>
       </div>
     </div>
   );
